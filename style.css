@@ -1,0 +1,33 @@
+
+:root{
+    /* quick theme knobs */
+    --accent: #6c5ce7;
+    --text: #1f2937;
+}
+html{ scroll-behavior:smooth; }
+body{ color:var(--text); }
+
+/* Sections */
+section { padding: 72px 0; }
+.section-title { font-weight: 800; letter-spacing:.4px; }
+
+/* Navbar tweaks */
+.navbar-brand { font-weight:800; letter-spacing:.5px; }
+.nav-link { font-weight:600; }
+.btn-accent { background:var(--accent); color:#fff; }
+.btn-accent:hover { filter:brightness(.95); color:#fff; }
+
+/* Hero */
+.hero { padding: 96px 0 64px; background: linear-gradient(180deg, rgba(108,92,231,.08), transparent); }
+
+/* Avatar */
+.avatar {
+    width: 160px; height: 160px; object-fit: cover; border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* Project cards */
+.project-card .badge { font-weight:600; }
+
+/* Footer */
+footer { padding: 48px 0; border-top:1px solid rgba(0,0,0,.06); }

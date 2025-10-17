@@ -1,32 +1,330 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hender's Portfolio</title>
- </head>
- <body>
-   <div class="header">
-      <h1>Welcome to my portfolio</h1>
-   </div>
-    <h2>
-      <a href="./public/birthday-invite.html">Birthday Invite Project</a>
-   </h2> 
-    <br />
-    <img src="./assets/images/birthday-invite.png" height="200" alt="Birthday card"/>
-    <hr />
-    <h2><a href="./public/movie-ranking.html">Movie Ranking Project</a></h2>
-    <br />
-    <img src="./assets/images/movie-ranking.png" height="200" alt="Movie ranking"/>
-    <hr />
-    <div class = "footer">
-      <footer>
-      <a href="./public/about.html">Contact me</a>
-      <br />
-      <a href="./public/contact.html">About me</a>
-    </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio • Hender Hernandez</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  
+  <!-- CSS mods -->
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Welcome to Hender's Portfolio!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-accent ms-lg-2" href="./assets/resume/technical-resume.pdf" download>Download Résumé</a>
+          </li>
+        </ul>
+      </div>
     </div>
-   
- </body>
- </html>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-md-4 text-center">
+          <!-- Replace src with your headshot -->
+          <img class="avatar" src="./assets/images/hender_headshot.jpg" alt="hender's headshot" />
+        </div>
+        <div class="col-12 col-md-8">
+          <span class="badge text-bg-light mb-2">Computer Science Student</span>
+          <h1 class="display-5 fw-bold mb-3">Hi, I’m <span style="color:var(--accent)">Hender Hernandez</span>.</h1>
+          <p class="lead mb-4">
+            I build practical, clean, and performant software. My interests span software engineering,
+            cybersecurity, and AI. I enjoy turning ideas into things people can use.
+          </p>
+          <div class="d-flex gap-2">
+            <a class="btn btn-accent" href="#projects"><i class="bi bi-grid-3x3-gap me-1"></i> See Projects</a>
+            <a class="btn btn-outline-dark" href="#contact"><i class="bi bi-send me-1"></i> Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="section-title h1 mb-4">About Me</h2>
+          <p class="mb-3">I’m a sophomore pursuing a B.S. in Computer Science. I like building small apps and
+            tools that make life easier, everything from retro-inspired games to automation scripts. I learn fast, ship
+            efficiently, and value readable code.</p>
+          <p class="mb-0">I’m currently looking for internship opportunities in software engineering or
+            systems/IT where I can contribute to real projects, level up alongside a collaborative team, and keep
+            sharpening my fundamentals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-light">
+    <div class="container">
+      <h2 class="section-title h1 mb-4">Skills</h2>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 border rounded-3 h-100">
+            <h6 class="text-uppercase text-muted">Languages</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge text-bg-dark">Java</span>
+              <span class="badge text-bg-dark">C++</span>
+              <span class="badge text-bg-dark">Python</span>
+              <span class="badge text-bg-dark">HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 border rounded-3 h-100">
+            <h6 class="text-uppercase text-muted">Tools</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge text-bg-secondary">Git</span>
+              <span class="badge text-bg-secondary">Linux</span>
+              <span class="badge text-bg-secondary">VS Code</span>
+              <span class="badge text-bg-secondary">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 border rounded-3 h-100">
+            <h6 class="text-uppercase text-muted">Areas</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge text-bg-info">Software Eng</span>
+              <span class="badge text-bg-info">Cybersecurity</span>
+              <span class="badge text-bg-info">AI/ML</span>
+              <span class="badge text-bg-info">Game Dev</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-3 border rounded-3 h-100">
+            <h6 class="text-uppercase text-muted">Soft Skills</h6>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+              <span class="badge text-bg-light border">Problem Solving</span>
+              <span class="badge text-bg-light border">Teamwork</span>
+              <span class="badge text-bg-light border">Communication</span>
+              <span class="badge text-bg-light border">Adaptability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+        <h2 class="section-title h1 mb-0">Projects</h2>
+        <div class="btn-group" role="group" aria-label="Project filters">
+          <button class="btn btn-outline-dark active" data-filter="all">All</button>
+          <button class="btn btn-outline-dark" data-filter="web">Web</button>
+          <button class="btn btn-outline-dark" data-filter="ml">AI/ML</button>
+          <button class="btn btn-outline-dark" data-filter="game">Game</button>
+          <button class="btn btn-outline-dark" data-filter="other">Other</button>
+        </div>
+      </div>
+
+      <div class="row g-4" id="projectGrid">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="web">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio Site</h5>
+              <p class="card-text">Responsive personal website built with Bootstrap and vanilla JS.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-dark">HTML</span>
+                <span class="badge text-bg-dark">Bootstrap</span>
+                <span class="badge text-bg-dark">JS</span>
+              </div>
+              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noreferrer">Live</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="ml">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Image Classifier</h5>
+              <p class="card-text">Small CNN experiment to categorize food vs. drink images.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-dark">Python</span>
+                <span class="badge text-bg-dark">TensorFlow</span>
+              </div>
+              <a class="btn btn-outline-dark btn-sm" href="#">Demo</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#">Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="game">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Retro 2D Platformer</h5>
+              <p class="card-text">Pygame project inspired by classic DOS-era adventures.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-dark">Python</span>
+                <span class="badge text-bg-dark">Pygame</span>
+              </div>
+              <a class="btn btn-outline-dark btn-sm" href="#">Trailer</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#">Code</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="other">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">CLI Automation</h5>
+              <p class="card-text">Command-line tool to batch rename files and organize folders.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-dark">Python</span>
+              </div>
+              <a class="btn btn-outline-secondary btn-sm" href="#">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="bg-light">
+    <div class="container">
+      <h2 class="section-title h1 mb-4">Experience</h2>
+      <div class="list-group">
+        <div class="list-group-item py-3">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">IT Helpdesk Assistant • SUNY Poly</h5>
+            <small class="text-muted">2024 — Present</small>
+          </div>
+          <p class="mb-1">Supported students and staff with account access, networking, and device setup. Documented
+            troubleshooting steps and improved ticket response time.</p>
+          <small class="text-muted">Tech: Windows, Linux, Ticketing</small>
+        </div>
+        <div class="list-group-item py-3">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Course Projects</h5>
+            <small class="text-muted">Ongoing</small>
+          </div>
+          <p class="mb-1">Discrete Math & Linear Algebra practice, data structures, and systems topics. Focus on
+            writing efficient code and clear documentation.</p>
+          <small class="text-muted">Java, C++, Python</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title h1 mb-4">Contact</h2>
+          <p class="mb-4">Want to collaborate or chat? Send a quick message and I’ll get back to you.
+            Prefer email? <a href="mailto:you@example.com">you@example.com</a></p>
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-control" required />
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control" rows="4" required></textarea>
+              <div class="invalid-feedback">Write a short message.</div>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-accent">Send</button>
+              <a href="mailto:you@example.com" class="btn btn-outline-dark">Email Instead</a>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 border rounded-3 h-100">
+            <h6 class="text-uppercase text-muted">Find me online</h6>
+            <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
+              <li><i class="bi bi-github me-2"></i><a href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><i class="bi bi-linkedin me-2"></i><a href="#" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><i class="bi bi-envelope me-2"></i><a href="mailto:you@example.com">you@example.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-1">&copy; <span id="year"></span> Hender Hernandez. All rights reserved.</p>
+      <small class="text-muted">Built with Bootstrap 5.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form bootstrap validation
+    (function() {
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', function (e) {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+          e.stopPropagation();
+        } else {
+          // Replace with your form handler / Formspree / EmailJS
+          e.preventDefault();
+          alert('Thanks! Your message was validated. Hook up a real endpoint to send it.');
+        }
+        form.classList.add('was-validated');
+      }, false);
+    })();
+
+    // Simple project filter
+    (function(){
+      const buttons = document.querySelectorAll('[data-filter]');
+      const cards = document.querySelectorAll('#projectGrid .project-card');
+      buttons.forEach(btn => btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.tags.split(',').includes(filter);
+          card.classList.toggle('d-none', !show);
+        });
+      }));
+    })();
+  </script>
+</body>
+</html>
