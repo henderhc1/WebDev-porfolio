@@ -1,31 +1,53 @@
 // assets/js/main.js
-
 (() => {
-  // Init dynamic year in footer
+  // Footer year
   function initYear() {
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
-  // Init Bootstrap-style validation for the contact form
+  // Contact form: Bootstrap validation + Formspree submission (AJAX)
   function initContactFormValidation() {
     const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Front-end validation
       if (!form.checkValidity()) {
-        e.preventDefault();
-        e.stopPropagation();
-      } else {
-        // Hook up your real endpoint (Formspree/EmailJS/server) here
-        e.preventDefault();
-        alert('Thanks! Your message was validated. Hook up a real endpoint to send it.');
+        form.classList.add('was-validated');
+        return;
       }
-      form.classList.add('was-validated');
+
+      // Honeypot (simple bot check)
+      const gotcha = form.querySelector('input[name="_gotcha"]');
+      if (gotcha && gotcha.value) return;
+
+      // Send to Formspree
+      status.innerHTML = 'Sending...';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          status.innerHTML = '<div class="alert alert-success mt-2">Thanks! Your message was sent.</div>';
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          status.innerHTML = '<div class="alert alert-danger mt-2">Oops, something went wrong. Try again later.</div>';
+        }
+      } catch {
+        status.innerHTML = '<div class="alert alert-danger mt-2">Network error. Please try again.</div>';
+      }
     });
   }
 
-  // Init simple project filter buttons
+  // Project filter buttons
   function initProjectFilters() {
     const buttons = document.querySelectorAll('[data-filter]');
     const cards = document.querySelectorAll('#projectGrid .project-card');
@@ -33,11 +55,9 @@
 
     buttons.forEach((btn) => {
       btn.addEventListener('click', () => {
-        // Toggle active button state
         buttons.forEach((b) => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // Filter cards
         const filter = btn.getAttribute('data-filter');
         cards.forEach((card) => {
           const tags = (card.dataset.tags || '').split(',');
@@ -48,7 +68,7 @@
     });
   }
 
-  // Call all initializers
+  // Init
   initYear();
   initContactFormValidation();
   initProjectFilters();
