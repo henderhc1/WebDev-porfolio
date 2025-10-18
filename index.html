@@ -9,13 +9,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Bootstrap Icons (optional) -->
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  
-  <!-- CSS mods -->
+
+  <!-- Your CSS -->
   <link href="./style.css" rel="stylesheet">
-  
-  <!-- Your JS (external) -->
+
+  <!-- Your JS -->
   <script defer src="./assets/js/main.js"></script>
 </head>
 
@@ -160,8 +160,8 @@
                 <span class="badge text-bg-dark">Bootstrap</span>
                 <span class="badge text-bg-dark">JS</span>
               </div>
-              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noreferrer">Live</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noreferrer">Code</a>
+              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Live</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
         </div>
@@ -175,8 +175,8 @@
                 <span class="badge text-bg-dark">Python</span>
                 <span class="badge text-bg-dark">TensorFlow</span>
               </div>
-              <a class="btn btn-outline-dark btn-sm" href="#">Demo</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#">Code</a>
+              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
         </div>
@@ -190,8 +190,8 @@
                 <span class="badge text-bg-dark">Python</span>
                 <span class="badge text-bg-dark">Pygame</span>
               </div>
-              <a class="btn btn-outline-dark btn-sm" href="#">Trailer</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#">Code</a>
+              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Trailer</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-bg-dark">Python</span>
               </div>
-              <a class="btn btn-outline-secondary btn-sm" href="#">Code</a>
+              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
         </div>
@@ -246,40 +246,67 @@
       <div class="row g-4">
         <div class="col-lg-6">
           <h2 class="section-title h1 mb-4">Contact</h2>
-          <p class="mb-4">Want to collaborate or chat? Send a quick message and I’ll get back to you.
-            Prefer email? <a href="mailto:you@example.com">henderlegacy@gmail.com</a></p>
-          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <p class="mb-4">
+            Want to collaborate or chat? Send a quick message and I’ll get back to you.
+            Prefer email? <a href="mailto:henderlegacy@gmail.com">henderlegacy@gmail.com</a>
+          </p>
+
+          <!-- Formspree-enabled form (expects JSON from main.js) -->
+          <form id="contactForm" action="https://formspree.io/f/xblzbjla" method="POST" novalidate>
+            <!-- Honeypot (optional spam trap) -->
+            <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
+
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" class="form-control" required />
+              <input type="text" id="name" name="name" class="form-control" required />
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
+
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" class="form-control" required />
+              <input type="email" id="email" name="email" class="form-control" required />
               <div class="invalid-feedback">Enter a valid email.</div>
             </div>
+
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
-              <textarea id="message" class="form-control" rows="4" required></textarea>
+              <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
               <div class="invalid-feedback">Write a short message.</div>
             </div>
-            <div class="d-flex gap-2">
+
+            <!-- Status area for success/error text -->
+            <div id="formStatus" class="small"></div>
+
+            <div class="d-flex gap-2 mt-2">
               <button type="submit" class="btn btn-accent">Send</button>
-              <a href="mailto:you@example.com" class="btn btn-outline-dark">Email Instead</a>
+              <a href="mailto:henderlegacy@gmail.com" class="btn btn-outline-dark">Email Instead</a>
             </div>
           </form>
         </div>
+
         <div class="col-lg-6">
           <div class="p-4 border rounded-3 h-100">
             <h6 class="text-uppercase text-muted">Find me online</h6>
             <ul class="list-unstyled mt-3 mb-0 d-grid gap-2">
-              <li><i class="bi bi-github me-2"></i><a href="https://github.com/henderhc1/henderhc1" target="_blank" rel="link to github">GitHub</a></li>
-              <li><i class="bi bi-linkedin me-2"></i><a href="https://www.linkedin.com/in/hender-hernandez/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-              <li><i class="bi bi-envelope me-2"></i><a href="mailto:henderlegacy@gmail.com">henderlegacy@gmail.com</a></li>
+              <li>
+                <a href="https://github.com/henderhc1/henderhc1" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-github me-2"></i>GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/hender-hernandez/" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-linkedin me-2"></i>LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="mailto:henderlegacy@gmail.com">
+                  <i class="bi bi-envelope me-2"></i>henderlegacy@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>
+
       </div>
     </div>
   </section>
