@@ -18,10 +18,21 @@
   <!-- JS -->
   <script defer src="./assets/js/main.js"></script>
 </head>
-
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">  
   <!-- Navbar -->
   <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-body-tertiary sticky-top">
+    <!-- Auto-hide toast (bottom-right) -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1060">
+      <div id="autoToast" class="toast text-bg-warning border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            🚧 This site is under active development — some sections may be incomplete.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <a class="navbar-brand" href="#home">Welcome to Hender's Portfolio!</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">

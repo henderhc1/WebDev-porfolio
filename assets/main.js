@@ -73,8 +73,18 @@
     });
   }
 
+  // Development banner
+  function initAutoToast() {
+    const toastEl = document.getElementById('autoToast');
+    if (!toastEl || typeof bootstrap === 'undefined') return;
+    // Show for 5 seconds, then auto-hide
+    const toast = new bootstrap.Toast(toastEl, { delay: 5000, autohide: true });
+    toast.show();
+  }
+
   // Initialize features
   initYear();
   initContactFormValidation();
   initProjectFilters();
+  initAutoToast();
 })();
