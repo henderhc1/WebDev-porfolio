@@ -67,7 +67,7 @@
         </div>
         <div class="col-12 col-md-8">
           <span class="badge text-bg-light mb-2">Computer Science Student</span>
-          <h1 class="display-5 fw-bold mb-3">Hi, I’m <span style="color:var(--accent)">Hender Hernandez</span>.</h1>
+          <h1 class="display-5 fw-bold mb-3">Hi, I'm <span style="color:var(--accent)">Hender Hernandez</span>.</h1>
           <p class="lead mb-4">
             I build practical, clean, and performant software. My interests span software engineering,
             and cybersecurity. I enjoy turning ideas into things people can use.
@@ -87,11 +87,10 @@
       <div class="row justify-content-center">
         <div class="col-lg-10">
           <h2 class="section-title h1 mb-4">About Me</h2>
-          <p class="mb-3">I’m a Junior pursuing a B.S. in Computer Science. I like building small apps and
+          <p class="mb-3">I'm a Junior pursuing a B.S. in Computer Science. I like building small apps and
             tools that make life easier, everything from retro-inspired games to automation scripts. I learn fast, and
-            ship
-            efficiently.</p>
-          <p class="mb-0">I’m currently looking for internship opportunities in software engineering or
+            ship efficiently.</p>
+          <p class="mb-0">I'm currently looking for internship opportunities in software engineering or
             systems/IT where I can contribute to real projects, level up alongside a collaborative team, and keep
             sharpening my fundamentals.</p>
         </div>
@@ -162,88 +161,153 @@
           <button class="btn btn-outline-dark" data-filter="web">Web</button>
           <button class="btn btn-outline-dark" data-filter="ml">AI/ML</button>
           <button class="btn btn-outline-dark" data-filter="game">Game</button>
+          <button class="btn btn-outline-dark" data-filter="automation">Automation</button>
           <button class="btn btn-outline-dark" data-filter="other">Other</button>
         </div>
       </div>
 
       <div class="row g-4" id="projectGrid">
-        <!-- Card 1 -->
+
+        <!-- Instagram Bot -->
+        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="automation">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="project-icon">🤖</span>
+                <h5 class="card-title mb-0">Instagram Automation Bot</h5>
+              </div>
+              <p class="card-text flex-grow-1">Automated Instagram bot that fetches fresh images from Pexels, generates
+                captions using a facts/jokes API, and posts on a daily schedule via Windows Task Scheduler. Features
+                session persistence, retry logic, and zero memory usage when idle.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-dark">Python</span>
+                <span class="badge text-bg-dark">Instagrapi</span>
+                <span class="badge text-bg-dark">REST APIs</span>
+                <span class="badge text-bg-secondary">Automation</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-secondary btn-sm" href="https://github.com/henderhc1/Instagram-bot" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-github me-1"></i>Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Podify -->
         <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="web">
           <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Portfolio Site</h5>
-              <p class="card-text">Responsive personal website built with Bootstrap and vanilla JS.</p>
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="project-icon">🎙️</span>
+                <h5 class="card-title mb-0">Podify</h5>
+              </div>
+              <p class="card-text flex-grow-1">Personal podcast manager that lets you search YouTube, download audio,
+                and stream it like a podcast app. Features a persistent library, playback controls, speed adjustment,
+                and shuffle/repeat — all in a single-page web app deployed on Railway.</p>
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge text-bg-dark">Python</span>
+                <span class="badge text-bg-dark">Flask</span>
+                <span class="badge text-bg-dark">yt-dlp</span>
+                <span class="badge text-bg-dark">JavaScript</span>
+                <span class="badge text-bg-secondary">Railway</span>
+              </div>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-dark btn-sm" href="https://podify.up.railway.app" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>Live
+                  <i class="bi bi-box-arrow-up-right me-1"></i>Live
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Site -->
+        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="web">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="project-icon">🌐</span>
+                <h5 class="card-title mb-0">Portfolio Site</h5>
+              </div>
+              <p class="card-text flex-grow-1">Responsive personal website built with Bootstrap and vanilla JS.</p>
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-bg-dark">HTML</span>
                 <span class="badge text-bg-dark">Bootstrap</span>
                 <span class="badge text-bg-dark">JS</span>
               </div>
-              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Live</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Live</a>
+                <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
+
+        <!-- progr3ss web -->
         <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="other">
           <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">progr3ss web</h5>
-              <p class="card-text">Full stack web application built with using the MERN stack (MongoDB, Express, React, Node.js).</p>
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="project-icon">📊</span>
+                <h5 class="card-title mb-0">progr3ss web</h5>
+              </div>
+              <p class="card-text flex-grow-1">Full stack web application built with the MERN stack (MongoDB, Express, React, Node.js).</p>
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-bg-dark">MongoDB</span>
                 <span class="badge text-bg-dark">Express</span>
                 <span class="badge text-bg-dark">React</span>
                 <span class="badge text-bg-dark">Node.js</span>
               </div>
-              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Card 3 -->
+
+        <!-- Image Classifier -->
         <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="ml">
           <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Image Classifier</h5>
-              <p class="card-text">Small CNN experiment to categorize food vs. drink images.</p>
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="project-icon">🧠</span>
+                <h5 class="card-title mb-0">Image Classifier</h5>
+              </div>
+              <p class="card-text flex-grow-1">Small CNN experiment to categorize food vs. drink images.</p>
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-bg-dark">Python</span>
                 <span class="badge text-bg-dark">TensorFlow</span>
               </div>
-              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Card 4 -->
+
+        <!-- Retro 2D Platformer -->
         <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="game">
           <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Retro 2D Platformer</h5>
-              <p class="card-text">Pygame project inspired by classic DOS-era adventures.</p>
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="project-icon">🕹️</span>
+                <h5 class="card-title mb-0">Retro 2D Platformer</h5>
+              </div>
+              <p class="card-text flex-grow-1">Pygame project inspired by classic DOS-era adventures.</p>
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <span class="badge text-bg-dark">Python</span>
                 <span class="badge text-bg-dark">Pygame</span>
               </div>
-              <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
-            </div>
-          </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="col-12 col-md-6 col-lg-4 project-card" data-tags="other">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">CLI Automation</h5>
-              <p class="card-text">Command-line tool to batch rename files and organize folders.</p>
-              <div class="d-flex flex-wrap gap-2 mb-3">
-                <span class="badge text-bg-dark">Python</span>
+              <div class="d-flex gap-2">
+                <a class="btn btn-outline-dark btn-sm" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
               </div>
-              <a class="btn btn-outline-secondary btn-sm" href="#" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -281,36 +345,28 @@
         <div class="col-lg-6">
           <h2 class="section-title h1 mb-4">Contact</h2>
           <p class="mb-4">
-            Want to collaborate or chat? Send a quick message and I’ll get back to you.
+            Want to collaborate or chat? Send a quick message and I'll get back to you.
             Prefer email? <a href="mailto:henderlegacy@gmail.com">henderlegacy@gmail.com</a>
           </p>
 
-          <!-- Formspree-enabled form (expects JSON from main.js) -->
           <form id="contactForm" action="https://formspree.io/f/xblzbjla" method="POST" novalidate>
-            <!-- Honeypot (optional spam trap) -->
             <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
-
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" id="name" name="name" class="form-control" required />
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
-
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input type="email" id="email" name="email" class="form-control" required />
               <div class="invalid-feedback">Enter a valid email.</div>
             </div>
-
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
               <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
               <div class="invalid-feedback">Write a short message.</div>
             </div>
-
-            <!-- Status area for success/error text -->
             <div id="formStatus" class="small"></div>
-
             <div class="d-flex gap-2 mt-2">
               <button type="submit" class="btn btn-accent">Send</button>
               <a href="mailto:henderlegacy@gmail.com" class="btn btn-outline-dark">Email Instead</a>
@@ -340,7 +396,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </section>
